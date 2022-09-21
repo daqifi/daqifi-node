@@ -1,0 +1,75 @@
+<script type="text/javascript">
+  RED.nodes.registerType('nyquist',{
+      category: 'function',
+      color: '#a6bbcf',
+      defaults: {
+          hostnameOrIp: {value:"localhost", required:true},
+          port: {value: 9760, required:true, validate: RED.validators.number()},
+          sampleRate: {value: 10, required: true},
+          analogCh1: {value: false},
+          analogCh2: {value: false},
+          analogCh3: {value: false},
+          analogCh4: {value: false},
+          analogCh5: {value: false},
+          analogCh6: {value: false}
+      },
+      inputs:0,
+      outputs:1,
+      icon: "font-awesome/fa-cogs",
+      label: function() {
+          return `nyquist - ${this.hostnameOrIp}:${this.port}`;
+      }
+  });
+</script>
+
+<script type="text/html" data-template-name="nyquist">
+  <div class="form-row">
+      <label for="node-input-hostOrIp"><i class="fa fa-tag"></i> Host or IP</label>
+      <input type="text" id="node-input-hostOrIp" placeholder="localhost">
+  </div>
+  <div class="form-row">
+    <label for="node-input-port"><i class="fa fa-tag"></i>Port</label>
+    <input type="text" id="node-input-port" placeholder="9760">
+  </div>
+  <div class="form-row">
+    <label for="node-input-sampleRate"><i class="fa fa-tag"></i>Sample Rate</label>
+    <input type="text" id="node-input-sampleRate" placeholder="10">
+  </div>
+  <h5>Analog In Channels</h5>
+  <div class="form-row">
+    <label for="node-input-analogCh1"><i class="fa fa-tag"></i>Channel 1</label>
+    <input type="checkbox" id="node-input-analogCh1" value="true" >
+  </div>
+  <div class="form-row">
+    <label for="node-input-analogCh2"><i class="fa fa-tag"></i>Channel 2</label>
+    <input type="checkbox" id="node-input-analogCh2" value="true" name="node-input-analogChannel2">
+  </div>
+  <div class="form-row">
+    <label for="node-input-analogCh3"><i class="fa fa-tag"></i>Channel 3</label>
+    <input type="checkbox" id="node-input-analogCh3" name="node-input-analogChannels">
+  </div>
+  <div class="form-row">
+    <label for="node-input-analogCh4"><i class="fa fa-tag"></i>Channel 4</label>
+    <input type="checkbox" id="node-input-analogCh4" name="node-input-analogChannels">
+  </div>
+  <div class="form-row">
+    <label for="node-input-analogCh5"><i class="fa fa-tag"></i>Channel 5</label>
+    <input type="checkbox" id="node-input-analogCh5" name="node-input-analogChannels">
+  </div>
+  <div class="form-row">
+    <label for="node-input-analogCh6"><i class="fa fa-tag"></i>Channel 6</label>
+    <input type="checkbox" id="node-input-analogCh6" name="node-input-analogChannels">
+  </div>
+  <div class="form-row">
+    <label for="node-input-analogCh7"><i class="fa fa-tag"></i>Channel 7</label>
+    <input type="checkbox" id="node-input-analogCh7" name="node-input-analogChannels">
+  </div>
+  <div class="form-row">
+    <label for="node-input-analogCh8"><i class="fa fa-tag"></i>Channel 8</label>
+    <input type="checkbox" id="node-input-analogCh8" name="node-input-analogChannels">
+  </div>
+</script>
+
+<script type="text/html" data-help-name="nyquist">
+  <p>A node that connects to DAQiFi Nyquist devices</p>
+</script>
