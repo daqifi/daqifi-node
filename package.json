@@ -1,6 +1,6 @@
 {
   "name": "daqifi",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "node.js package for connecting to DAQiFi Nyquist DACs",
   "main": "dist/lib/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "author": "Marc Bernardini",
   "license": "MIT",
-  "directories":{
+  "directories": {
     "dist": "dist",
     "example": "example",
     "lib": "lib"
