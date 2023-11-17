@@ -1,6 +1,6 @@
 {
   "name": "daqifi",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "node.js package for connecting to DAQiFi Nyquist DACs",
   "main": "dist/lib/index.js",
   "scripts": {

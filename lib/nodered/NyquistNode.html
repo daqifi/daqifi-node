@@ -3,7 +3,7 @@
       category: 'function',
       color: '#a6bbcf',
       defaults: {
-          hostnameOrIp: {value:"localhost", required:true},
+          hostOrIp: {value:"localhost", required:true},
           port: {value: 9760, required:true, validate: RED.validators.number()},
           sampleRate: {value: 10, required: true},
           analogCh1: {value: false},
@@ -11,13 +11,15 @@
           analogCh3: {value: false},
           analogCh4: {value: false},
           analogCh5: {value: false},
-          analogCh6: {value: false}
+          analogCh6: {value: false},
+          analogCh7: {value: false},
+          analogCh8: {value: false},
       },
       inputs:0,
       outputs:1,
       icon: "font-awesome/fa-cogs",
       label: function() {
-          return `nyquist - ${this.hostnameOrIp}:${this.port}`;
+          return `nyquist - ${this.hostOrIp}:${this.port}`;
       }
   });
 </script>
